@@ -14,6 +14,8 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage {
 
     private final Logger logger = LogManager.getRootLogger();
 
+    private String variableForCheck;
+
     @FindBy(xpath = "//input[@ng-model='listingCtrl.computeServer.quantity']")
     WebElement numberOfInstancesContainer;
 
