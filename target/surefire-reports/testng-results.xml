@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-21T02:49:51 MSK" name="Testing Google Calculator" finished-at="2022-03-21T02:50:21 MSK" duration-ms="29648">
+    <groups>
+    </groups>
+    <test started-at="2022-03-21T02:49:51 MSK" name="Testing Google Calculator" finished-at="2022-03-21T02:50:21 MSK" duration-ms="29648">
+      <class name="test.GoogleCloudCalculatorTest">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:test.GoogleCloudCalculatorTest@654f0d9c]" started-at="2022-03-21T02:49:51 MSK" name="browserSetup" finished-at="2022-03-21T02:49:53 MSK" duration-ms="2519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="compareCosts()[pri:0, instance:test.GoogleCloudCalculatorTest@654f0d9c]" started-at="2022-03-21T02:49:53 MSK" name="compareCosts" description="calculated total monthly cost on google page is equal to cost in email letter" finished-at="2022-03-21T02:50:20 MSK" duration-ms="26331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compareCosts -->
+        <test-method is-config="true" signature="browserTearDown()[pri:0, instance:test.GoogleCloudCalculatorTest@654f0d9c]" started-at="2022-03-21T02:50:20 MSK" name="browserTearDown" finished-at="2022-03-21T02:50:21 MSK" duration-ms="772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserTearDown -->
+      </class> <!-- test.GoogleCloudCalculatorTest -->
+    </test> <!-- Testing Google Calculator -->
+  </suite> <!-- Testing Google Calculator -->
+</testng-results>
