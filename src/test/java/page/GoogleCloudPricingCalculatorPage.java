@@ -27,7 +27,7 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage {
     @FindBy(xpath = "//md-select[@ng-model='listingCtrl.computeServer.instance']")
     WebElement machineTypeContainer;
 
-    private static final String machineTypePattern = "//md-option[@role='option' and contains(@id, '%s')]";
+    private static final String machineTypePattern = "//md-option[@role='option' and contains(text(), '%s')]";
 
     @FindBy(xpath = "//md-select[@ng-model='listingCtrl.computeServer.location']")
     WebElement regionContainer;
