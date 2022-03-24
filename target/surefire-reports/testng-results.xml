@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-24T17:09:50 MSK" name="Testing Google Calculator" finished-at="2022-03-24T17:10:22 MSK" duration-ms="31749">
+  <suite started-at="2022-03-24T19:24:13 MSK" name="Testing Google Calculator" finished-at="2022-03-24T19:24:50 MSK" duration-ms="36320">
     <groups>
     </groups>
-    <test started-at="2022-03-24T17:09:50 MSK" name="Testing Google Calculator" finished-at="2022-03-24T17:10:22 MSK" duration-ms="31749">
+    <test started-at="2022-03-24T19:24:13 MSK" name="Testing Google Calculator" finished-at="2022-03-24T19:24:50 MSK" duration-ms="36320">
       <class name="test.GoogleCloudCalculatorTest">
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:test.GoogleCloudCalculatorTest@6580cfdd]" started-at="2022-03-24T17:09:50 MSK" name="browserSetup" finished-at="2022-03-24T17:09:55 MSK" duration-ms="4909" status="PASS">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:test.GoogleCloudCalculatorTest@6580cfdd]" started-at="2022-03-24T19:24:13 MSK" name="browserSetup" finished-at="2022-03-24T19:24:18 MSK" duration-ms="4822" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method signature="compareCosts()[pri:0, instance:test.GoogleCloudCalculatorTest@6580cfdd]" started-at="2022-03-24T17:09:55 MSK" name="compareCosts" description="calculated total monthly cost on google page is equal to cost in email letter" finished-at="2022-03-24T17:10:21 MSK" duration-ms="25968" status="PASS">
+        <test-method signature="compareCosts()[pri:0, instance:test.GoogleCloudCalculatorTest@6580cfdd]" started-at="2022-03-24T19:24:18 MSK" name="compareCosts" description="calculated total monthly cost on google page is equal to cost in email letter" finished-at="2022-03-24T19:24:49 MSK" duration-ms="30527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- compareCosts -->
-        <test-method is-config="true" signature="browserTearDown()[pri:0, instance:test.GoogleCloudCalculatorTest@6580cfdd]" started-at="2022-03-24T17:10:21 MSK" name="browserTearDown" finished-at="2022-03-24T17:10:22 MSK" duration-ms="848" status="PASS">
+        <test-method is-config="true" signature="browserTearDown()[pri:0, instance:test.GoogleCloudCalculatorTest@6580cfdd]" started-at="2022-03-24T19:24:49 MSK" name="browserTearDown" finished-at="2022-03-24T19:24:50 MSK" duration-ms="932" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserTearDown -->
