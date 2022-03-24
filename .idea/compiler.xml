@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hurt-me-plenty" />
+        <module name="selenium-webdriver-task" />
       </profile>
     </annotationProcessing>
   </component>

@@ -14,28 +14,28 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage {
 
     private final Logger logger = LogManager.getRootLogger();
 
+    private String variableForCheck;
+
     @FindBy(xpath = "//input[@ng-model='listingCtrl.computeServer.quantity']")
     WebElement numberOfInstancesContainer;
 
     @FindBy(xpath = "//md-select[@ng-model='listingCtrl.computeServer.class']")
     WebElement vmClassContainer;
 
-    private static final String machineClassPattern = "//md-option[@role='option' and contains(@id, '%s') and @class='md-ink-ripple']";
+    private static final String machineClassPattern = "//md-option[@role='option' and @class='md-ink-ripple']/div[contains(text(), '%s')]";
 
     @FindBy(xpath = "//md-select[@ng-model='listingCtrl.computeServer.instance']")
     WebElement machineTypeContainer;
 
-    private static final String machineTypePattern = "//md-option[@role='option' and contains(@id, '%s')]";
+    private static final String commonPattern = "//md-option[@role='option']/div[contains(text(), '%s')]";
 
     @FindBy(xpath = "//md-select[@ng-model='listingCtrl.computeServer.location']")
     WebElement regionContainer;
 
-    private static final String regionPattern = "//md-option[@role='option' and contains(@id, '%s')]";
+    private static final String regionPattern = "//md-option[@role='option' and contains(@ng-repeat, 'computeServer')]/div[contains(text(), '%s')]";
 
     @FindBy(xpath = "//md-select[@ng-model='listingCtrl.computeServer.cud']")
     WebElement committedUsageContainer;
-
-    private static final String committedUsageChoicePattern = "//md-option[@role='option' and contains(@id, '%s')]";
 
     @FindBy(xpath = "//button[@aria-label='Add to Estimate']")
     List<WebElement> addToEstimateButton;
@@ -70,9 +70,9 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage {
     public GoogleCloudPricingCalculatorPage chooseMachineClass(String machineClass) {
         elementToBeClickable(vmClassContainer);
         vmClassContainer.click();
-        WebElement vmClassChoice = driver.findElement(By.xpath(buildLocatorForMachineClassChoice(machineClass)));
-        elementToBeClickable(vmClassChoice);
-        vmClassChoice.click();
+        List<WebElement> vmClassChoice = driver.findElements(By.xpath(buildLocatorForMachineClassChoice(machineClass)));
+        elementToBeClickable(vmClassChoice.get(1));
+        vmClassChoice.get(1).click();
         return this;
     }
 
@@ -98,9 +98,9 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage {
     public GoogleCloudPricingCalculatorPage chooseUsageTime(String committedUsageTime) {
         elementToBeClickable(committedUsageContainer);
         committedUsageContainer.click();
-        WebElement usageTime = driver.findElement(By.xpath(buildLocatorForUsageTimeChoice(committedUsageTime)));
-        elementToBeClickable(usageTime);
-        usageTime.click();
+        List<WebElement> usageTime = driver.findElements(By.xpath(buildLocatorForUsageTimeChoice(committedUsageTime)));
+        elementToBeClickable(usageTime.get(1));
+        usageTime.get(1).click();
         return this;
     }
 
@@ -141,11 +141,11 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage {
     }
 
     private String buildLocatorForUsageTimeChoice(String contains) {
-        return String.format(committedUsageChoicePattern, contains);
+        return String.format(commonPattern, contains);
     }
 
     private String buildLocatorForMachineTypeChoice(String contains) {
-        return String.format(machineTypePattern, contains);
+        return String.format(commonPattern, contains);
     }
 
     private String buildLocatorForMachineClassChoice(String contains) {
