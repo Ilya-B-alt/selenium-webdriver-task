@@ -8,17 +8,21 @@ import page.GoogleCloudHomePage;
 import page.GoogleCloudPricingCalculatorPage;
 import service.VirtualMachineCreator;
 
+import java.util.Properties;
+
 public class GoogleCloudCalculatorTest extends CommonConditions {
 
 
     private String estimatedCostOnGooglePage;
     private String monthlyCostInEmail;
+    private VirtualMachine virtualMachine;
+    private Properties properties;
 
 
     @Test (description = "calculated total monthly cost on google page is equal to cost in email letter")
     public void compareCosts () {
 
-        VirtualMachine virtualMachine = VirtualMachineCreator.withCredentialsFromProperty();
+        virtualMachine = VirtualMachineCreator.withCredentialsFromProperty();
         GoogleCloudPricingCalculatorPage calculatorPage = new GoogleCloudHomePage(driver)
                 .openPage()
                 .writeQueryToSearchBox()
