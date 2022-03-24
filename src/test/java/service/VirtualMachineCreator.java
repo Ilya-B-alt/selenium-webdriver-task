@@ -11,8 +11,8 @@ public class VirtualMachineCreator {
     public static final String COMMITTED_USAGE_TIME = "testdata.virtualMachine.committedUsageTime";
 
     public static VirtualMachine withCredentialsFromProperty () {
-        return new VirtualMachine(TestDataReader.getTestData(NUMBER_OF_INSTANCES), TestDataReader.getTestData(MACHINE_CLASS),
-                TestDataReader.getTestData(MACHINE_TYPE), TestDataReader.getTestData(REGION),
-                TestDataReader.getTestData(COMMITTED_USAGE_TIME));
+        return new VirtualMachine(TestDataReader.loadProperty(NUMBER_OF_INSTANCES), TestDataReader.loadProperty(MACHINE_CLASS),
+                TestDataReader.loadProperty(MACHINE_TYPE), TestDataReader.loadProperty(REGION),
+                TestDataReader.loadProperty(COMMITTED_USAGE_TIME));
     }
 }
