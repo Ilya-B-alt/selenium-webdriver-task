@@ -16,7 +16,6 @@ public class GoogleCloudCalculatorTest extends CommonConditions {
     private String estimatedCostOnGooglePage;
     private String monthlyCostInEmail;
     private VirtualMachine virtualMachine;
-    private Properties properties;
 
 
     @Test (description = "calculated total monthly cost on google page is equal to cost in email letter")
