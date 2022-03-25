@@ -9,25 +9,31 @@ import java.util.ResourceBundle;
 import static java.io.File.separator;
 
 public class TestDataReader {
-//    private static PropertyResourceBundle resourceBundle = (PropertyResourceBundle) PropertyResourceBundle.getBundle(System.getProperty("environment"));
+   private static PropertyResourceBundle resourceBundle = (PropertyResourceBundle) PropertyResourceBundle.getBundle(System.getProperty("environment"));
 //
 //    public static String getTestData(String key) {
 //        return resourceBundle.getString(key);
 //    }
 
     private static Properties properties = new Properties();
+    static {
+        loadProperty();
+    }
 
-    public static String loadProperty(String key) {
+    public static String loadProperty (String key) {
+        return properties.getProperty(key);
+    }
+
+    public static void loadProperty () {
 
         try (FileInputStream file = new FileInputStream("src" + separator + "test" + separator
-                + "resources" + separator + "dev.properties")) {
+                + "resources" + separator + System.getProperty("environment") + ".properties")) {
             properties.load(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return properties.getProperty(key);
     }
 }
 
