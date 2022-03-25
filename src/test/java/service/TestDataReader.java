@@ -27,7 +27,7 @@ public class TestDataReader {
     public static void loadProperty () {
 
         try (FileInputStream file = new FileInputStream("src" + separator + "test" + separator
-                + "resources" + separator + System.getProperty("environment") + ".properties")) {
+                + "resources" + separator + System.getProperty("environment").trim() + ".properties")) {
             properties.load(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
