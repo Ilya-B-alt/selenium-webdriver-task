@@ -9,7 +9,7 @@ import java.util.ResourceBundle;
 import static java.io.File.separator;
 
 public class TestDataReader {
-   private static PropertyResourceBundle resourceBundle = (PropertyResourceBundle) PropertyResourceBundle.getBundle(System.getProperty("environment"));
+//   private static PropertyResourceBundle resourceBundle = (PropertyResourceBundle) PropertyResourceBundle.getBundle(System.getProperty("environment"));
 //
 //    public static String getTestData(String key) {
 //        return resourceBundle.getString(key);
